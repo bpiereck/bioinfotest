@@ -1,0 +1,32 @@
+######
+##### in this file you may alter the paramethers to run assebly
+######
+
+
+
+
+###### BWA INDEX AND ASSEBLY PARAMETERS
+
+#bwa_prefix       = human
+#bwa_idxType      = is
+#bwa_idxType      = bwtsw
+bwa_output       = /biotest/output/bioteste.sam
+bwa_fasta        = /biotest/data/hg19/hg19.fasta
+bwa_fastq        = /biotest/data/fastq/
+bwa_thread       = 5
+bwa_create_index = No
+
+
+
+###### FREEBAYES CALL VARIANTES
+fb_target  = /biotest/data/BRCA.bed 
+fb_fasta   = /biotest/data/hg19/hg19.fasta
+
+
+###### SNPEFF FUNCTIONAL ANNOTATION OF VARIANTES
+#snp_thread  = 5
+snp_memmory = -Xmx8g
+snp_genome_reference = GRCh37.75
+
+
+

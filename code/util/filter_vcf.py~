@@ -1,0 +1,14 @@
+
+def filter(vcf):
+
+  with open(vcf,'r') as vcf:
+    for line in vcf:
+      if 'ANN=' in line:
+        if 'HIGH' in line or 'LOW' in line or 'MODERATE' in line:
+          columns = line.split('\t')
+          chr = columns[0]
+          posix = columns[1]
+          info  = columns[7]
+          str = f'{chr}\t{posix}\t{info}'
+          LINES.append(str)
+          print (f'{str}\n\n\n')
